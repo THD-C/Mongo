@@ -1,0 +1,15 @@
+services:  
+  Mongo:
+    build: 
+      dockerfile: Dockerfile
+    image: thd/mongo
+    container_name: THD_Mongo
+    hostname: Mongo
+    restart: unless-stopped
+    ports:
+      - 27017:27017 
+    volumes:
+      - MO-Data:/data/db
+
+volumes:
+  MO-Data:
