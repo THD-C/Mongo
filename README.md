@@ -12,3 +12,5 @@ Each `.json` file defines singular collection. Collection name will be the same 
 
 ### Add custom data to DB
 You need to add or modify existing file inside the `/data` directory and rebuild the docker image, that's it.
+
+![image](/Picture/Example.png)
