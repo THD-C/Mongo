@@ -11,5 +11,9 @@ services:
     volumes:
       - MO-Data:/data/db
 
+secrets:
+  github_token:
+    file: ./.github_token
+
 volumes:
   MO-Data:
