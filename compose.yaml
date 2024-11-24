@@ -2,6 +2,8 @@ services:
   Mongo:
     build: 
       dockerfile: Dockerfile
+      secrets:
+        - github_token
     image: thd/mongo
     container_name: THD_Mongo
     hostname: Mongo
