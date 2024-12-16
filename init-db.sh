@@ -10,3 +10,8 @@ for file in /Secrets/*.json; do
     collection=$(basename "$file" .json)
     mongoimport --host localhost --port 27017 --db THDC --collection "Secrets" --file "$file" --jsonArray
 done
+
+for file in /passwords/*.json; do
+    collection=$(basename "$file" .json)
+    mongoimport --host localhost --port 27017 --db THDC --collection "CommonPasswords" --file "$file" --jsonArray
+done
