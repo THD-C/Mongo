@@ -1,15 +1,13 @@
-# mongo
-1. Template of pages with translations (home page, GDPR, page with crypto chart (independent of currency), for long texts)
-    - page id
-    - language
-    - header title
-    - content
-2. Secret Store
+# Mongo
 
-## Setup
-1. Create GitHub token to fetch App secrets
+MongoDB container, which communicates with [Mongo Manager](https://github.com/THD-C/Mongo_Manager).
+On startup inserts necessary data needed for system to function properly.
 
-    `echo "$(gh auth token)" > .github_token`
+It automatically fetches application secrets like `COIN_GECKO_KEY` from private repository [Secrets](https://github.com/THD-C/Secrets/blob/main/THDC_secrets.json) and list of most common passwords stored in repository [Common_Passwords](https://github.com/THD-C/Common_Passwords).
+
+During the **build** process `github_token` needs to be passed in order to authenticate to [Secrets](https://github.com/THD-C/Secrets/blob/main/THDC_secrets.json) repository.
+
+`github_token` for development purposes can be created using shell command: `echo "$(gh auth token)" > .github_token`
 
 ## Data import mechanism
 After mongoDB container startup all data specified in `/data` directory in `.json` files will be imported to mongoDB.
