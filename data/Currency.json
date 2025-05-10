@@ -192,10 +192,6 @@
         "currency_type": 2
     },
     {
-        "currency_name": "tether",
-        "currency_type": 2
-    },
-    {
         "currency_name": "ripple",
         "currency_type": 2
     },
